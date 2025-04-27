@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logic Circuit</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+    img {
+      width: 850px;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+    input[type="text"] {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 2px solid #555;
+      border-radius: 8px;
+      background: #1f1f1f;
+      color: #e0e0e0;
+    }
+    .message {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #0f0;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Light up the bulb to gain the word, order from top to bottom</h1>
+  <img src="logic.png" alt="Logic Puzzle Image">
+  <br>
+  <input type="text" id="inputBox" placeholder="Enter the code...">
+  <div class="message" id="message">Your word is <strong>motsuc</strong></div>
+
+  <script>
+    const inputBox = document.getElementById('inputBox');
+    const message = document.getElementById('message');
+
+    inputBox.addEventListener('input', () => {
+      if (inputBox.value.trim() === '101100') {
+        message.style.display = 'block';
+      } else {
+        message.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
