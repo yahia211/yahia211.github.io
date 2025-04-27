@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Royal Riddle</title>
+    <style>
+        body {
+            background-color: #f3f0e6;
+            font-family: 'Garamond', serif;
+            margin: 0;
+            padding: 40px;
+            color: #4b3c2a;
+            text-align: center;
+        }
+
+        .scroll {
+            background: #fff8dc;
+            border: 8px solid #d2b48c;
+            padding: 30px;
+            margin: auto;
+            max-width: 700px;
+            box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+            border-radius: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.6;
+        }
+
+        input[type="text"] {
+            margin-top: 20px;
+            padding: 10px;
+            width: 200px;
+            font-size: 18px;
+            border: 2px solid #a1866f;
+            border-radius: 8px;
+            background-color: #fffaf0;
+            color: #4b3c2a;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #c2a878;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #a98b64;
+        }
+
+        #result {
+            margin-top: 30px;
+            font-size: 22px;
+            color: #2f5233;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll">
+        <h1>🕯️ The Royal Riddle 🕯️</h1>
+        <p>
+            The King of a small country invites 1000 senators to his annual party. As a tradition, each senator brings the King a bottle of wine.
+            Soon after, the Queen discovers that one of the senators is trying to assassinate the King by giving him a bottle of poisoned wine.
+            The King can only do one round of testing the bottles before the party the following day, as the poison takes 24 hours to kill the drinker.
+            <br><br>
+            The King is willing to risk the lives of the kingdom's prisoners but would prefer to use the least amount of prisoners possible to find the poisoned bottle.
+            <br><br>
+            What is the lowest number of prisoners required to find the bottle with only one round of testing?
+            <br><br>
+            Additionally, the King would like to double his number of senators to expand his land and would like to test the bottles every year.
+            What is the new minimum number of prisoners that would be required to test the bottles now?
+            <br><br>
+            <strong>The answer should be the two numbers concatenated.</strong>
+        </p>
+
+        <input type="text" id="answer" placeholder="Enter your answer">
+        <br>
+        <button onclick="checkAnswer()">Submit</button>
+
+        <div id="result">You have shown some great wisdom so far, you are getting close to your inheritance.
+		This time, your word is elegant.
+		Your last 2 clues are: https://www.mediafire.com/view/kvf62i04w1m5p50/clue_12.png/file & https://www.mediafire.com/view/ftg3sy0n3s9b2w1/clue_11.png/file</div>
+    </div>
+
+    <script>
+        function checkAnswer() {
+            const input = document.getElementById('answer').value.trim();
+            if (input === "1011") {
+                document.getElementById('result').style.display = "block";
+            } else {
+                document.getElementById('result').style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
